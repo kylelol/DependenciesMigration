@@ -6,19 +6,28 @@
 //
 
 import SwiftUI
+import Core
+import ModuleA
+import ModuleB
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+    
+    let container: Container
+    let showModuleA: Bool
+    
+    var moduleAEntryPoint: ModuleAEntryPoint {
+        return container.get()
     }
-}
-
-#Preview {
-    ContentView()
+    
+    var moduleBEntryPoint: ModuleBEntryPoint {
+        return container.get()
+    }
+    
+    var body: some View {
+        if showModuleA {
+            moduleAEntryPoint.makeModuleAScreen()
+        } else {
+            moduleBEntryPoint.makeModuleBScreen()
+        }
+    }
 }

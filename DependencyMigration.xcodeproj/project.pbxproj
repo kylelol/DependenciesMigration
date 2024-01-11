@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D67702C2B5098C20023428D /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 3D67702B2B5098C20023428D /* Core */; };
+		3D6770332B509A8B0023428D /* MyService in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6770322B509A8B0023428D /* MyService */; };
+		3D6770352B509A8B0023428D /* MyServiceLive in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6770342B509A8B0023428D /* MyServiceLive */; };
+		3D6770372B509C710023428D /* ModuleA in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6770362B509C710023428D /* ModuleA */; };
+		3D6770392B509C710023428D /* ModuleB in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6770382B509C710023428D /* ModuleB */; };
 		3DE2CBB92B50966100EDF95B /* DependencyMigrationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE2CBB82B50966100EDF95B /* DependencyMigrationApp.swift */; };
 		3DE2CBBB2B50966100EDF95B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE2CBBA2B50966100EDF95B /* ContentView.swift */; };
 		3DE2CBBD2B50966200EDF95B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE2CBBC2B50966200EDF95B /* Assets.xcassets */; };
@@ -19,6 +24,7 @@
 		3DE2CBBA2B50966100EDF95B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3DE2CBBC2B50966200EDF95B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DE2CBBF2B50966200EDF95B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3DE2CBCD2B5097E900EDF95B /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +32,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6770352B509A8B0023428D /* MyServiceLive in Frameworks */,
+				3D6770332B509A8B0023428D /* MyService in Frameworks */,
+				3D6770372B509C710023428D /* ModuleA in Frameworks */,
+				3D67702C2B5098C20023428D /* Core in Frameworks */,
+				3D6770392B509C710023428D /* ModuleB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D67702A2B5098C20023428D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3DE2CBAC2B50966100EDF95B = {
 			isa = PBXGroup;
 			children = (
+				3DE2CBCD2B5097E900EDF95B /* Modules */,
 				3DE2CBB72B50966100EDF95B /* DependencyMigration */,
 				3DE2CBB62B50966100EDF95B /* Products */,
+				3D67702A2B5098C20023428D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +103,13 @@
 			dependencies = (
 			);
 			name = DependencyMigration;
+			packageProductDependencies = (
+				3D67702B2B5098C20023428D /* Core */,
+				3D6770322B509A8B0023428D /* MyService */,
+				3D6770342B509A8B0023428D /* MyServiceLive */,
+				3D6770362B509C710023428D /* ModuleA */,
+				3D6770382B509C710023428D /* ModuleB */,
+			);
 			productName = DependencyMigration;
 			productReference = 3DE2CBB52B50966100EDF95B /* DependencyMigration.app */;
 			productType = "com.apple.product-type.application";
@@ -344,6 +371,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D67702B2B5098C20023428D /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		3D6770322B509A8B0023428D /* MyService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyService;
+		};
+		3D6770342B509A8B0023428D /* MyServiceLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyServiceLive;
+		};
+		3D6770362B509C710023428D /* ModuleA */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModuleA;
+		};
+		3D6770382B509C710023428D /* ModuleB */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModuleB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DE2CBAD2B50966100EDF95B /* Project object */;
 }
